@@ -10,11 +10,18 @@ const images = [
   {
     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'Group of Horses Running',
-  },
+  }
 ];
 
 const listImg = document.querySelector('.gallery');
 
+const arrayOfTags = []; // Массив тегов
+
+// Заполняем массив тегов по массиву атрибутов images
 images.forEach(element => {
-  listImg.insertAdjacentHTML("beforeend", `<li><img src=${element.url} alt="${element.alt}"></li>`);
-})
+  arrayOfTags.push(`<li><img src=${element.url} alt="${element.alt}"></li>`);
+});
+
+const arrayOfJoinTags = arrayOfTags.join(" "); // Удаляем запятые из массива тегов
+
+listImg.insertAdjacentHTML("beforeend", arrayOfJoinTags); // Добавляем теги в разметку

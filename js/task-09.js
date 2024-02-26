@@ -9,11 +9,9 @@ const changeButton = document.querySelector(".widget"); // Ищем интера
 const numberOfHex = document.querySelector(".color"); // Ищем <span> для отображения номера цвета
 changeButton.addEventListener("click", handleChange); // Слушатель события "click" кнопки
 
-let bgColor = 0; // Переменная для хранения текущего цвета
-
 // Обработчик клика по кнопке
 function handleChange(event) {
-  bgColor = getRandomHexColor(); // Генерация случайного кода цвета и запись его в переменную
+  let bgColor = getRandomHexColor(); // Генерация случайного кода цвета и запись его в переменную
 
   numberOfHex.textContent = bgColor; // Добавить в <span> текст в виде кода цвета
   changeButton.parentNode.style.backgroundColor = bgColor; // Добавление стиля в тег <body>

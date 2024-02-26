@@ -14,13 +14,16 @@ function handleSubmit(event) {
     if (email === "" || password === "") {
       const message = "Все поля должны быть заполнены!";
     return alert(message);
-  }
+    }
+  
+  // Добавление введённых данных в объект
+  const dataOfUser = {
+    email: email,
+    password: password,
+  };
+  
 
-  console.log(`Email: ${email}, Password: ${password}`);
-    form.reset(); // Сброс формы
-    
-    // Добавление введённых данных в объект
-    const dataOfUser = {};
-    dataOfUser.email = email;
-    dataOfUser.password = password;
+  console.log(dataOfUser);
+  form.reset(); // Сброс формы
+  
 }

@@ -19,9 +19,8 @@ ingredients.forEach(element => {
   arrayTags.push(heading); // Создание массива готовых тегов
 });
 
-arrayTags.forEach(tag => {
-  listEl.appendChild(tag); // Вставляем созданный элемент heading в выбранный тег listEl
-});
+listEl.append(...arrayTags); // Вставляем массив тегов arrayTags в выбранный тег listEl
+
 
 
 

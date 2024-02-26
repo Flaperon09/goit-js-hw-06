@@ -13,7 +13,7 @@ textInput.addEventListener("blur", () => {
         textInput.classList.remove('valid');
         textInput.classList.remove('invalid');
         textInput.classList.add('validation-input');
-    } else if (arraySymbols.length <= textInput.getAttribute('data-length')) {
+    } else if (arraySymbols.length === Number(textInput.getAttribute('data-length'))) {
         textInput.classList.remove('invalid');
         textInput.classList.add('valid');
     } else {
